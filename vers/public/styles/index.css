@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #151515;
+  color: white;
+  font-family: "Manrope";
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #151515;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.big-image__image {
+  width: 100%;
+  min-height: 250px;
+  background-image: url(../images/mobile-hero.png);
+  background-size: cover;
+}
+
+.div-main {
+  background-color: #292929;
+  padding: 45px 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.div-main__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.div-main__subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 450px;
+  text-align: center;
+}
+.div-main__button {
+  background-color: #26BD00;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 16px;
+  padding: 10px 50px;
+  max-width: 60%;
+}
+
+.div-play {
+  background-color: #292929;
+  padding: 45px 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.div-play__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.div-play__subtitle {
+  font-size: 20px;
+  font-weight: 400;
+}
+.div-play__button {
+  background-color: #26BD00;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 16px;
+  padding: 10px 50px;
+  max-width: 60%;
+}
+.div-play__text {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.div-play__button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.div-play__texts-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.div-play__hero-image {
+  max-width: 50%;
+  height: 100%;
+}/*# sourceMappingURL=index.css.map */

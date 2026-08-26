@@ -1,0 +1,19 @@
+@mixin main-title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+@mixin main-subtitle {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin main-text {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin role-text {
+    font-size: 20px;
+    font-weight: 400;
+}

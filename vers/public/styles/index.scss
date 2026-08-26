@@ -1,0 +1,130 @@
+@use "colors" as c;
+@use "texts" as t;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: c.$background-color;
+    color: c.$text-color;
+    font-family: "Manrope";
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex-center-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button {
+    background-color: c.$buttons-color;
+    color: c.$text-color;
+    font-weight: 600;
+    border: none;
+}
+
+@mixin main-button {
+    @include button;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 16px;
+
+    padding: 10px 50px;
+    max-width: 60%;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: c.$background-color;
+    @include flex-center-wrap;
+    padding: 10px;
+}
+
+.big-image__image {
+    width: 100%;
+    min-height: 250px;
+    background-image: url(../images/mobile-hero.png);
+    background-size: cover;
+}
+
+@mixin div {
+    background-color: c.$div-color;
+    padding: 45px 23px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 20px 20px 20px 20px;
+}
+.div-main {
+    @include div;
+    @include flex-center-wrap;
+
+    &__title {
+        @include t.main-title;   
+    }
+
+    &__subtitle {
+        @include t.main-subtitle;
+        max-width: 450px;
+        text-align: center;
+    }
+
+    &__button {
+        @include main-button;
+    }
+}
+
+.div-play {
+    @include div;
+    @include flex-center-wrap;
+
+    &__title {
+        @include t.main-title;   
+    }
+
+    &__subtitle {
+        @include t.role-text;
+    }
+
+    &__button {
+        @include main-button;
+    }
+
+    &__text {
+        @include t.main-text;
+        text-align: center;
+    }
+
+    &__button-div {
+        @include flex-center-column;
+        gap: 15px;
+    }
+
+    &__texts-div {
+       @include flex-center-column;
+        gap: 15px; 
+    }
+
+    &__hero-image {
+        max-width: 50%;
+        height: 100%;
+    }
+}
