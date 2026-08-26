@@ -20,11 +20,11 @@ img {
   width: 100%;
   height: 100vh;
   background-color: #151515;
+  padding: 10px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 10px;
 }
 
 .big-image__image {
@@ -119,4 +119,85 @@ img {
 .div-play__hero-image {
   max-width: 50%;
   height: 100%;
+}
+
+.settings-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #151515;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-settings {
+  background-color: #292929;
+  padding: 45px 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  min-width: 330px;
+}
+.div-settings__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.div-settings__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+.div-settings__button-square {
+  background-color: #26BD00;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 3px 8px;
+}
+.div-settings__inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.div-settings__input {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #373737;
+  padding: 16px 12px;
+  border: none;
+  width: 100%;
+}
+.div-settings__text {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.settings-button {
+  background-color: #26BD00;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 16px;
+  padding: 10px 50px;
+  max-width: 60%;
 }/*# sourceMappingURL=index.css.map */
