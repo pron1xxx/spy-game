@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="settings-container">
+    <div class="settings-container" id="main-container">
         <div class="div-settings">
             <div class="div-settings__header">
                 <h2 class="div-settings__title"> Игроки </h2>
@@ -36,9 +36,13 @@
 <script src="./js/main-game.js"> </script>
 
 <script> 
-
-    const game = new Game; 
-    spys = game.getSpys(["Игрок 1", "Игрок 2", "Игрок 3"],1);
-
-    console.log(spys);
+    const main_div = document.querySelector('#main-container');
+    console.log(main_div);
+    const players = [
+        'Игрок 1',
+        'Игрок 2',
+        'Игрок 3'
+    ]
+    const game = new Game(players, 1, main_div); 
+    game.start_game();
 </script>
