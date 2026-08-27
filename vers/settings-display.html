@@ -31,18 +31,36 @@
         <button class="settings-button" id="start-game-button"> Запустить игру </button>
     </div>
 </body>
+
 </html>
 
-<script src="./js/main-game.js"> </script>
+<script src="./js/Game.js"> </script>
 
-<script> 
-    const main_div = document.querySelector('#main-container');
-    console.log(main_div);
-    const players = [
-        'Игрок 1',
-        'Игрок 2',
-        'Игрок 3'
-    ]
-    const game = new Game(players, 1, main_div); 
-    game.start_game();
+<script>
+    const inputs_div = document.querySelector(".div-settings__inputs")
+    document.querySelector("#add-player-button").addEventListener('click', () => {
+        inputs_div.insertAdjacentHTML("beforeend", 
+            `
+            <input class="div-settings__input player" value="Игрок"></input>
+            `
+        )
+    })
 </script>
+
+<script>
+    start_button = document.querySelector("#start-game-button");
+    start_button.addEventListener('click', () => {
+        const main_div = document.querySelector('#main-container');
+        const spy_count = document.querySelector('#spy-count-input').value;
+        const players_divs = document.querySelectorAll(".player")
+        const players = [];
+
+        players_divs.forEach((player_div) => {
+            players.push(player_div.value)
+        })
+
+        const game = new Game(players, spy_count, main_div);
+        game.start_game();
+    })
+</script>
+
