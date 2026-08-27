@@ -64,7 +64,6 @@ img {
   border-radius: 20px 20px 20px 20px;
   font-size: 16px;
   padding: 10px 50px;
-  max-width: 60%;
 }
 
 .div-play {
@@ -95,7 +94,6 @@ img {
   border-radius: 20px 20px 20px 20px;
   font-size: 16px;
   padding: 10px 50px;
-  max-width: 60%;
 }
 .div-play__text {
   font-size: 14px;
@@ -199,5 +197,4 @@ img {
   border-radius: 20px 20px 20px 20px;
   font-size: 16px;
   padding: 10px 50px;
-  max-width: 60%;
 }/*# sourceMappingURL=index.css.map */
