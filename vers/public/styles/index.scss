@@ -76,12 +76,13 @@ img {
     gap: 30px;
     border-radius: 20px 20px 20px 20px;
 }
+
 .div-main {
     @include div;
     @include flex-center-wrap;
 
     &__title {
-        @include t.main-title;   
+        @include t.main-title;
     }
 
     &__subtitle {
@@ -100,7 +101,7 @@ img {
     @include flex-center-wrap;
 
     &__title {
-        @include t.main-title;   
+        @include t.main-title;
     }
 
     &__subtitle {
@@ -122,8 +123,8 @@ img {
     }
 
     &__texts-div {
-       @include flex-center-column;
-        gap: 15px; 
+        @include flex-center-column;
+        gap: 15px;
     }
 
     &__hero-image {
@@ -193,4 +194,159 @@ img {
 
 .settings-button {
     @include main-button;
+}
+
+// Окно ошибки
+.error-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+    padding: 20px;
+}
+
+.error-modal {
+    background: c.$div-color;
+    padding: 40px 35px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s ease;
+    position: relative;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #ff4757;
+        margin: 0;
+        font-family: "Manrope";
+    }
+
+    &__close {
+        background: none;
+        border: none;
+        color: c.$text-color;
+        font-size: 32px;
+        cursor: pointer;
+        padding: 0 8px;
+        transition: all 0.3s ease;
+        opacity: 0.6;
+        line-height: 1;
+
+        &:hover {
+            opacity: 1;
+            transform: rotate(90deg);
+            color: #ff4757;
+        }
+    }
+
+    &__message {
+        color: c.$text-color;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        font-family: "Manrope";
+        padding: 15px 0;
+        border-top: 1px solid rgba(c.$text-color, 0.1);
+        border-bottom: 1px solid rgba(c.$text-color, 0.1);
+    }
+
+    &__button {
+        @include main-button;
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(c.$buttons-color, 0.3);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}
+
+// Анимации
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+// Варианты ошибок
+.error-modal {
+    &--warning &__title {
+        color: #ffa502;
+    }
+
+    &--warning &__button {
+        background-color: #ffa502;
+        color: #fff;
+
+        &:hover {
+            background-color: darken(#ffa502, 10%);
+        }
+    }
+
+    &--success &__title {
+        color: #2ed573;
+    }
+
+    &--success &__button {
+        background-color: #2ed573;
+        color: #fff;
+
+        &:hover {
+            background-color: darken(#2ed573, 10%);
+        }
+    }
+
+    &--info &__title {
+        color: #1e90ff;
+    }
+
+    &--info &__button {
+        background-color: #1e90ff;
+        color: #fff;
+
+        &:hover {
+            background-color: darken(#1e90ff, 10%);
+        }
+    }
 }

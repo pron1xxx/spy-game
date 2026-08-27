@@ -5,10 +5,13 @@ class GameManager {
     #players_divs = [];
     #players = [];
     #start_button;
+    #error_manager;
 
 
     constructor(main_div) {
         this.#main_div = main_div;
+
+        this.#error_manager = new ErrorManager();
 
         this.#players_divs = Array.from(this.#main_div.querySelectorAll(".player"))
         let i = 0;
@@ -19,7 +22,7 @@ class GameManager {
             i++;
 
             player_div.addEventListener('change', () => {
-                this.#players[player_div.id] = player_div.value;
+                this.#changeValue(player_div);
             })
         })
 
@@ -33,9 +36,14 @@ class GameManager {
         })
 
         this.#start_button.addEventListener('click', () => {
-            const game = new Game(this.#players, this.#spy_count, this.#main_div);
-            console.log(this.#players);
-            game.start_game();
+            try {
+                const game = new Game(this.#players, this.#spy_count, this.#main_div);
+                game.start_game();
+            }
+            catch (error) {
+               this.#error_manager.show(error.message, "error");
+            }
+            
         })
 
         this.#createAddButton();
@@ -57,8 +65,16 @@ class GameManager {
             this.#players.push(main_div.querySelector(`[id="${this.#players.length}"]`).value)
             const player_div = main_div.querySelector(`[id="${this.#players.length-1}"]`);
             player_div.addEventListener('change', () => {
-                this.#players[player_div.id] = player_div.value;
+                this.#changeValue(player_div);  
             })
         })
+    }
+
+    #changeValue(player_div) {
+        if(!player_div.value) {
+            this.#error_manager.show("Неверное имя игрока, оно сброшено до стандартного", "error");
+            player_div.value = `Игрок ${Number(player_div.id) + 1}`
+        }
+        this.#players[player_div.id] = player_div.value;
     }
 }
