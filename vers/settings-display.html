@@ -35,32 +35,14 @@
 </html>
 
 <script src="./js/Game.js"> </script>
+<script src="./js/GameManager.js"> </script>
 
 <script>
-    const inputs_div = document.querySelector(".div-settings__inputs")
-    document.querySelector("#add-player-button").addEventListener('click', () => {
-        inputs_div.insertAdjacentHTML("beforeend", 
-            `
-            <input class="div-settings__input player" value="Игрок"></input>
-            `
-        )
-    })
+    
 </script>
 
 <script>
-    start_button = document.querySelector("#start-game-button");
-    start_button.addEventListener('click', () => {
-        const main_div = document.querySelector('#main-container');
-        const spy_count = document.querySelector('#spy-count-input').value;
-        const players_divs = document.querySelectorAll(".player")
-        const players = [];
-
-        players_divs.forEach((player_div) => {
-            players.push(player_div.value)
-        })
-
-        const game = new Game(players, spy_count, main_div);
-        game.start_game();
-    })
+    const main_div = document.querySelector('#main-container');
+    gameManager = new GameManager(main_div);
 </script>
 
