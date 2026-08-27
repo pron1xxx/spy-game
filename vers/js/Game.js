@@ -1,14 +1,16 @@
 class Game {
     #players;
     #spy_count;
-    #theme_data;
+    #theme_json;
     #main_container;
+    #json_manager;
     #spys;
+    #hero_id;
+    #theme_type;
 
     constructor(players, spy_count, main_container) {
         this.#players = players;
         this.#spy_count = spy_count;
-        // this.#theme_data = theme_data;
         this.#main_container = main_container;
 
         if (this.#players.length < 3) {
@@ -20,7 +22,22 @@ class Game {
         else if (this.#players.length < this.#spy_count) {
             throw new Error("Количество шпионов не может превышать количество игроков!");
         }
+
+        this.#init_theme();
     }
+
+    async #init_theme() {
+        this.#json_manager = new JsonManager();
+        const data = await this.#json_manager.readJson("datapacks/dota_staff_image.json");
+
+        this.#theme_json = data['objects'];
+
+        this.#hero_id = Math.floor(Math.random() * Object.keys(this.#theme_json).length) + 1;
+        console.log(this.#hero_id)
+
+        this.#theme_type = data['settings']['type'];
+    }
+
 
     #choose_spy() {
         const spys = [];
@@ -89,7 +106,7 @@ class Game {
             }
             else {
                 this.#main_container.innerHTML = "";
-                this.#main_container.insertAdjacentHTML("beforeend", 
+                this.#main_container.insertAdjacentHTML("beforeend",
                     `
                     <div class="big-image">
                         <div alt="" class="big-image__image">
@@ -97,12 +114,10 @@ class Game {
                     <div class="div-play">
                         <h2 class="div-play__title"> ${player} </h2>
                         <div class="div-play__texts-div">
-                            <p class="div-play__subtitle"> hero </p>
-                            <div class="div-play__hero-image"><img
-                                    src="https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/alchemist.png" alt="">
+                            <p class="div-play__subtitle"> ${this.#theme_json[this.#hero_id]['name']} </p>
+                            <div class="div-play__hero-image">
                             </div>
                         </div>
-
                         <div class="div-play__button-div">
                             <button class="div-main__button" id="hideButton"> Скрыть </button>
                             <p class="div-play__text"> Нажимайте на кнопку и передавайте телефон дальше </p>
@@ -110,10 +125,38 @@ class Game {
                     </div>
                     `
                 )
+                const image_div = this.#main_container.querySelector(".div-play__hero-image");
+
+                if (this.#theme_type == "video" && !this.#spys.includes(player)) {
+                    image_div.style.maxWidth = "30%"
+                    image_div.insertAdjacentHTML('beforeend',
+                        `
+                    <video 
+                        src="${this.#theme_json[this.#hero_id]['image']}"
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    </video>
+                    `
+                    )
+                }
+                else if (this.#theme_type == "image" && !this.#spys.includes(player)) {
+                    image_div.style.maxWidth = "90%"
+                    image_div.insertAdjacentHTML('beforeend',
+                        `
+                    <img src="${this.#theme_json[this.#hero_id]['image']}" alt="">
+                    `
+                    )
+                }
+                else {
+                    throw new Error("Неверно указан тип темы")
+                }
             }
             this.#main_container.querySelector("#hideButton").addEventListener('click', () => {
-            this.nextStage(player, "hide");
-        })
+                this.nextStage(player, "hide");
+            })
         }
         else if (action == "hide") {
             const new_player_index = this.#players.indexOf(player) + 1
@@ -123,7 +166,7 @@ class Game {
             }
             this.#main_container.innerHTML = "";
             this.#main_container.insertAdjacentHTML("beforeend",
-            `
+                `
             <div class="big-image">
                 <div alt="" class="big-image__image">
             </div>
@@ -135,16 +178,16 @@ class Game {
                 </div>
             </div>
             `
-        );
-        this.#main_container.querySelector("#showButton").addEventListener('click', () => {
-            this.nextStage(this.#players[new_player_index], "show");
-        })
+            );
+            this.#main_container.querySelector("#showButton").addEventListener('click', () => {
+                this.nextStage(this.#players[new_player_index], "show");
+            })
         }
     }
 
     #endGame() {
         this.#main_container.innerHTML = "";
-            this.#main_container.insertAdjacentHTML("beforeend",
+        this.#main_container.insertAdjacentHTML("beforeend",
             `
             <div class="big-image">
                 <div alt="" class="big-image__image">
