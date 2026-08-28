@@ -8,7 +8,7 @@ class Game {
     #hero_id;
     #theme_type;
     #theme_name;
-    #themes = ["dota_heroes_video.json", "dota_heroes_image.json", "dota_staff_image.json"];
+    #themes = Themes.getThemes();
 
     constructor(players, spy_count, main_container, theme_name) {
         this.#players = players;

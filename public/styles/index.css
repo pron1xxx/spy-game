@@ -25,6 +25,7 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-top: 100px;
 }
 
 .big-image__image {

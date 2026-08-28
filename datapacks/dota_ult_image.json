@@ -1,0 +1,508 @@
+{
+  "settings": {
+    "name": "Dota 2 Hero Ultimates with Images",
+    "type": "ultimate_abilities"
+  },
+  "objects": {
+    "1": {
+      "name": "Borrowed Time Abaddon",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/abaddon_borrowed_time.png"
+    },
+    "2": {
+      "name": "Chemical Rage Alchemist",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/alchemist_chemical_rage.png"
+    },
+    "3": {
+      "name": "Ice Blast Ancient Apparition",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/ancient_apparition_ice_blast.png"
+    },
+    "4": {
+      "name": "Mana Void Anti-Mage",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/antimage_mana_void.png"
+    },
+    "5": {
+      "name": "Tempest Double Arc Warden",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/arc_warden_tempest_double.png"
+    },
+    "6": {
+      "name": "Culling Blade Axe",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/axe_culling_blade.png"
+    },
+    "7": {
+      "name": "Fiend's Grip Bane",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/bane_fiends_grip.png"
+    },
+    "8": {
+      "name": "Flaming Lasso Batrider",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_flaming_lasso.png"
+    },
+    "9": {
+      "name": "Primal Roar Beastmaster",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/beastmaster_primal_roar.png"
+    },
+    "10": {
+      "name": "Rupture Bloodseeker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/bloodseeker_rupture.png"
+    },
+    "11": {
+      "name": "Track Bounty Hunter",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/bounty_hunter_track.png"
+    },
+    "12": {
+      "name": "Primal Split Brewmaster",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/brewmaster_primal_split.png"
+    },
+    "13": {
+      "name": "Warpath Bristleback",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/bristleback_warpath.png"
+    },
+    "14": {
+      "name": "Spawn Spiderlings Broodmother",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/broodmother_spawn_spiderlings.png"
+    },
+    "15": {
+      "name": "Stampede Centaur Warrunner",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/centaur_stampede.png"
+    },
+    "16": {
+      "name": "Phantasm Chaos Knight",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/chaos_knight_phantasm.png"
+    },
+    "17": {
+      "name": "Hand of God Chen",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/chen_hand_of_god.png"
+    },
+    "18": {
+      "name": "Skeleton Walk Clinkz",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/clinkz_skeleton_walk.png"
+    },
+    "19": {
+      "name": "Hookshot Clockwerk",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/clockwerk_hookshot.png"
+    },
+    "20": {
+      "name": "Freezing Field Crystal Maiden",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/crystal_maiden_freezing_field.png"
+    },
+    "21": {
+      "name": "Wall of Replica Dark Seer",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_seer_wall_of_replica.png"
+    },
+    "22": {
+      "name": "Terrorize Dark Willow",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dark_willow_terrorize.png"
+    },
+    "23": {
+      "name": "Solar Guardian Dawnbreaker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dawnbreaker_solar_guardian.png"
+    },
+    "24": {
+      "name": "Weave Dazzle",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dazzle_weave.png"
+    },
+    "25": {
+      "name": "Exorcism Death Prophet",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/death_prophet_exorcism.png"
+    },
+    "26": {
+      "name": "Static Storm Disruptor",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/disruptor_static_storm.png"
+    },
+    "27": {
+      "name": "Doom Doom",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/doom_bringer_doom.png"
+    },
+    "28": {
+      "name": "Elder Dragon Form Dragon Knight",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/dragon_knight_elder_dragon_form.png"
+    },
+    "29": {
+      "name": "Marksmanship Drow Ranger",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/drow_ranger_marksmanship.png"
+    },
+    "30": {
+      "name": "Magnetize Earth Spirit",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/earth_spirit_magnetize.png"
+    },
+    "31": {
+      "name": "Echo Slam Earthshaker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/earthshaker_echo_slam.png"
+    },
+    "32": {
+      "name": "Earth Splitter Elder Titan",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/elder_titan_earth_splitter.png"
+    },
+    "33": {
+      "name": "Fire Remnant Ember Spirit",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/ember_spirit_fire_remnant.png"
+    },
+    "34": {
+      "name": "Untouchable Enchantress",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/enchantress_untouchable.png"
+    },
+    "35": {
+      "name": "Black Hole Enigma",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/enigma_black_hole.png"
+    },
+    "36": {
+      "name": "Chronosphere Faceless Void",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/faceless_void_chronosphere.png"
+    },
+    "37": {
+      "name": "Soulbind Grimstroke",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/grimstroke_soulbind.png"
+    },
+    "38": {
+      "name": "Call Down Gyrocopter",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/gyrocopter_call_down.png"
+    },
+    "39": {
+      "name": "Sharpshooter Hoodwink",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/hoodwink_sharpshooter.png"
+    },
+    "40": {
+      "name": "Life Break Huskar",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/huskar_life_break.png"
+    },
+    "41": {
+      "name": "Invoke Invoker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_invoke.png"
+    },
+    "42": {
+      "name": "Relocate Io",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/wisp_relocate.png"
+    },
+    "43": {
+      "name": "Macropyre Jakiro",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/jakiro_macropyre.png"
+    },
+    "44": {
+      "name": "Omnislash Juggernaut",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/juggernaut_omnislash.png"
+    },
+    "45": {
+      "name": "Spirit Form Keeper of the Light",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/keeper_of_the_light_spirit_form.png"
+    },
+    "46": {
+      "name": "Raptor Dance Kez",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/kez_raptor_dance.png"
+    },
+    "47": {
+      "name": "Ghostship Kunkka",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/kunkka_ghost_ship.png"
+    },
+    "48": {
+      "name": "Duel Legion Commander",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/legion_commander_duel.png"
+    },
+    "49": {
+      "name": "Pulse Nova Leshrac",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/leshrac_pulse_nova.png"
+    },
+    "50": {
+      "name": "Chain Frost Lich",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/lich_chain_frost.png"
+    },
+    "51": {
+      "name": "Infest Lifestealer",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/life_stealer_infest.png"
+    },
+    "52": {
+      "name": "Laguna Blade Lina",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/lina_laguna_blade.png"
+    },
+    "53": {
+      "name": "Finger of Death Lion",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/lion_finger_of_death.png"
+    },
+    "54": {
+      "name": "True Form Lone Druid",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/lone_druid_true_form.png"
+    },
+    "55": {
+      "name": "Eclipse Luna",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/luna_eclipse.png"
+    },
+    "56": {
+      "name": "Shapeshift Lycan",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/lycan_shapeshift.png"
+    },
+    "57": {
+      "name": "Reverse Polarity Magnus",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/magnus_reverse_polarity.png"
+    },
+    "58": {
+      "name": "Unleash Marci",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/marci_unleash.png"
+    },
+    "59": {
+      "name": "Arena of Blood Mars",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/mars_arena_of_blood.png"
+    },
+    "60": {
+      "name": "Stone Gaze Medusa",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/medusa_stone_gaze.png"
+    },
+    "61": {
+      "name": "Divided We Stand Meepo",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/meepo_divided_we_stand.png"
+    },
+    "62": {
+      "name": "Moonlight Shadow Mirana",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/mirana_moonlight_shadow.png"
+    },
+    "63": {
+      "name": "Wukong's Command Monkey King",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/monkey_king_wukongs_command.png"
+    },
+    "64": {
+      "name": "Morph Morphling",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/morphling_morph_agi.png"
+    },
+    "65": {
+      "name": "Pierce the Veil Muerta",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/muerta_pierce_the_veil.png"
+    },
+    "66": {
+      "name": "Song of the Siren Naga Siren",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/naga_siren_song_of_the_siren.png"
+    },
+    "67": {
+      "name": "Wrath of Nature Nature's Prophet",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/natures_prophet_wrath_of_nature.png"
+    },
+    "68": {
+      "name": "Reaper's Scythe Necrophos",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/necrolyte_reapers_scythe.png"
+    },
+    "69": {
+      "name": "Darkness Night Stalker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/night_stalker_darkness.png"
+    },
+    "70": {
+      "name": "Vendetta Nyx Assassin",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/nyx_assassin_vendetta.png"
+    },
+    "71": {
+      "name": "Multicast Ogre Magi",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/ogre_magi_multicast.png"
+    },
+    "72": {
+      "name": "Guardian Angel Omniknight",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/omniknight_guardian_angel.png"
+    },
+    "73": {
+      "name": "False Promise Oracle",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/oracle_false_promise.png"
+    },
+    "74": {
+      "name": "Sanity's Eclipse Outworld Destroyer",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/obsidian_destroyer_sanity_eclipse.png"
+    },
+    "75": {
+      "name": "Rolling Thunder Pangolier",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pangolier_rolling_thunder.png"
+    },
+    "76": {
+      "name": "Coup de Grace Phantom Assassin",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_assassin_coup_de_grace.png"
+    },
+    "77": {
+      "name": "Juxtapose Phantom Lancer",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/phantom_lancer_juxtapose.png"
+    },
+    "78": {
+      "name": "Supernova Phoenix",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/phoenix_supernova.png"
+    },
+    "79": {
+      "name": "Pulverize Primal Beast",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/primal_beast_pulverize.png"
+    },
+    "80": {
+      "name": "Dream Coil Puck",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/puck_dream_coil.png"
+    },
+    "81": {
+      "name": "Dismember Pudge",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pudge_dismember.png"
+    },
+    "82": {
+      "name": "Life Drain Pugna",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/pugna_life_drain.png"
+    },
+    "83": {
+      "name": "Sonic Wave Queen of Pain",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/queen_of_pain_sonic_wave.png"
+    },
+    "84": {
+      "name": "Eye of the Storm Razor",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/razor_eye_of_the_storm.png"
+    },
+    "85": {
+      "name": "Cloak and Dagger Riki",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/riki_cloak_and_dagger.png"
+    },
+    "86": {
+      "name": "Spell Steal Rubick",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/rubick_spell_steal.png"
+    },
+    "87": {
+      "name": "Epicenter Sand King",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/sand_king_epicenter.png"
+    },
+    "88": {
+      "name": "Demonic Purge Shadow Demon",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_demon_demonic_purge.png"
+    },
+    "89": {
+      "name": "Requiem of Souls Shadow Fiend",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/nevermore_requiem.png"
+    },
+    "90": {
+      "name": "Mass Serpent Ward Shadow Shaman",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/shadow_shaman_mass_serpent_ward.png"
+    },
+    "91": {
+      "name": "Global Silence Silencer",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/silencer_global_silence.png"
+    },
+    "92": {
+      "name": "Mystic Flare Skywrath Mage",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/skywrath_mage_mystic_flare.png"
+    },
+    "93": {
+      "name": "Corrosive Haze Slardar",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/slardar_corrosive_haze.png"
+    },
+    "94": {
+      "name": "Shadow Dance Slark",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/slark_shadow_dance.png"
+    },
+    "95": {
+      "name": "Mortimer's Kisses Snapfire",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/snapfire_mortimer_kisses.png"
+    },
+    "96": {
+      "name": "Assassinate Sniper",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/sniper_assassinate.png"
+    },
+    "97": {
+      "name": "Haunt Spectre",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/spectre_haunt.png"
+    },
+    "98": {
+      "name": "Nether Strike Spirit Breaker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/spirit_breaker_nether_strike.png"
+    },
+    "99": {
+      "name": "Ball Lightning Storm Spirit",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/storm_spirit_ball_lightning.png"
+    },
+    "100": {
+      "name": "God's Strength Sven",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/sven_gods_strength.png"
+    },
+    "101": {
+      "name": "Remote Mines Techies",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/techies_remote_mines.png"
+    },
+    "102": {
+      "name": "Psionic Trap Templar Assassin",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/templar_assassin_psionic_trap.png"
+    },
+    "103": {
+      "name": "Sunder Terrorblade",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/terrorblade_sunder.png"
+    },
+    "104": {
+      "name": "Ravage Tidehunter",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/tidehunter_ravage.png"
+    },
+    "105": {
+      "name": "Chakram Timbersaw",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/shredder_chakram.png"
+    },
+    "106": {
+      "name": "Rearm Tinker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/tinker_rearm.png"
+    },
+    "107": {
+      "name": "Grow Tiny",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/tiny_grow.png"
+    },
+    "108": {
+      "name": "Overgrowth Treant Protector",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/treant_overgrowth.png"
+    },
+    "109": {
+      "name": "Battle Trance Troll Warlord",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/troll_warlord_battle_trance.png"
+    },
+    "110": {
+      "name": "Walrus PUNCH! Tusk",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/tusk_walrus_punch.png"
+    },
+    "111": {
+      "name": "Fiend's Gate Underlord",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/underlord_fiends_gate.png"
+    },
+    "112": {
+      "name": "Flesh Golem Undying",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/undying_flesh_golem.png"
+    },
+    "113": {
+      "name": "Enrage Ursa",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/ursa_enrage.png"
+    },
+    "114": {
+      "name": "Nether Swap Vengeful Spirit",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/vengeful_spirit_nether_swap.png"
+    },
+    "115": {
+      "name": "Poison Nova Venomancer",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/venomancer_poison_nova.png"
+    },
+    "116": {
+      "name": "Viper Strike Viper",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/viper_viper_strike.png"
+    },
+    "117": {
+      "name": "Summon Familiars Visage",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/visage_summon_familiars.png"
+    },
+    "118": {
+      "name": "Astral Step Void Spirit",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/void_spirit_astral_step.png"
+    },
+    "119": {
+      "name": "Chaotic Offering Warlock",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/warlock_chaotic_offering.png"
+    },
+    "120": {
+      "name": "Time Lapse Weaver",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/weaver_time_lapse.png"
+    },
+    "121": {
+      "name": "Focus Fire Windranger",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/windrunner_focus_fire.png"
+    },
+    "122": {
+      "name": "Winter's Curse Winter Wyvern",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/winter_wyvern_winters_curse.png"
+    },
+    "123": {
+      "name": "Death Ward Witch Doctor",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/witch_doctor_death_ward.png"
+    },
+    "124": {
+      "name": "Reincarnation Wraith King",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/wraith_king_reincarnation.png"
+    },
+    "125": {
+      "name": "Thundergod's Wrath Zeus",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/zeus_thundergods_wrath.png"
+    }
+  }
+}

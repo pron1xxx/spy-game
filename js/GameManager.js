@@ -7,7 +7,7 @@ class GameManager {
     #start_button;
     #error_manager;
     #theme_name;
-    #themes = ["dota_heroes_video.json", "dota_heroes_image.json", "dota_staff_image.json"];
+    #themes = Themes.getThemes();
 
 
     constructor(main_div) {
