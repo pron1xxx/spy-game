@@ -7,11 +7,14 @@ class Game {
     #spys;
     #hero_id;
     #theme_type;
+    #theme_name;
+    #themes = ["dota_heroes_video.json", "dota_heroes_image.json", "dota_staff_image.json"];
 
-    constructor(players, spy_count, main_container) {
+    constructor(players, spy_count, main_container, theme_name) {
         this.#players = players;
         this.#spy_count = spy_count;
         this.#main_container = main_container;
+        this.#theme_name = theme_name;
 
         if (this.#players.length < 3) {
             throw new Error("Количество игроков не менее 3")
@@ -28,12 +31,16 @@ class Game {
 
     async #init_theme() {
         this.#json_manager = new JsonManager();
-        const data = await this.#json_manager.readJson("datapacks/dota_staff_image.json");
+        console.log(this.#theme_name);
+        if(!this.#themes.includes(this.#theme_name)) {
+            throw new Error(`Неверная тема! ${this.#theme_name}`);
+        }
+
+        const data = await this.#json_manager.readJson(`datapacks/${this.#theme_name}`);
 
         this.#theme_json = data['objects'];
 
         this.#hero_id = Math.floor(Math.random() * Object.keys(this.#theme_json).length) + 1;
-        console.log(this.#hero_id)
 
         this.#theme_type = data['settings']['type'];
     }

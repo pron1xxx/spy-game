@@ -6,6 +6,8 @@ class GameManager {
     #players = [];
     #start_button;
     #error_manager;
+    #theme_name;
+    #themes = ["dota_heroes_video.json", "dota_heroes_image.json", "dota_staff_image.json"];
 
 
     constructor(main_div) {
@@ -35,20 +37,36 @@ class GameManager {
             this.#spy_count = this.#main_div.querySelector('#spy-count-input').value;
         })
 
+        this.#initTheme();
+        this.#createAddButton();
+
         this.#start_button.addEventListener('click', () => {
             try {
-                const game = new Game(this.#players, this.#spy_count, this.#main_div);
+                const game = new Game(this.#players, this.#spy_count, this.#main_div, this.#theme_name);
                 game.start_game();
             }
             catch (error) {
-               this.#error_manager.show(error.message, "error");
+                this.#error_manager.show(error.message, "error");
             }
-            
+
         })
 
-        this.#createAddButton();
     }
 
+    #initTheme() {
+        let theme_div = document.querySelector("#theme")
+        this.#theme_name = theme_div.value;
+        theme_div.addEventListener('change', () => {
+            if (theme_div.value == "rand") {
+                let random_theme_id = Math.floor(Math.random() * this.#themes.length)
+                this.#theme_name = this.#themes[random_theme_id]
+            }
+            else {
+                this.#theme_name = theme_div.value;
+            }
+        })
+        
+    }
     #createAddButton() {
         const inputs_div = this.#main_div.querySelector(".div-settings__inputs");
         const addButton = this.#main_div.querySelector("#add-player-button");
@@ -63,15 +81,15 @@ class GameManager {
 
             this.#players_divs.push(main_div.querySelector(`[id="${this.#players.length}"]`))
             this.#players.push(main_div.querySelector(`[id="${this.#players.length}"]`).value)
-            const player_div = main_div.querySelector(`[id="${this.#players.length-1}"]`);
+            const player_div = main_div.querySelector(`[id="${this.#players.length - 1}"]`);
             player_div.addEventListener('change', () => {
-                this.#changeValue(player_div);  
+                this.#changeValue(player_div);
             })
         })
     }
 
     #changeValue(player_div) {
-        if(!player_div.value) {
+        if (!player_div.value) {
             this.#error_manager.show("Неверное имя игрока, оно сброшено до стандартного", "error");
             player_div.value = `Игрок ${Number(player_div.id) + 1}`
         }
