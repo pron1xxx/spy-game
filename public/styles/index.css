@@ -21,11 +21,17 @@ img {
   height: 100vh;
   background-color: #151515;
   padding: 10px 10px;
+}
+@media (max-width: 600px) {
+  .container {
+    height: 100%;
+  }
+}
+.container {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
 }
 
 .big-image__image {
@@ -133,6 +139,13 @@ img {
   height: 100vh;
   background-color: #151515;
   padding: 10px 10px;
+}
+@media (max-width: 600px) {
+  .settings-container {
+    height: 100%;
+  }
+}
+.settings-container {
   display: flex;
   flex-direction: column;
   gap: 30px;

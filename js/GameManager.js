@@ -7,13 +7,16 @@ class GameManager {
     #start_button;
     #error_manager;
     #theme_name;
-    #themes = Themes.getThemes();
+    #themes;
 
 
     constructor(main_div) {
         this.#main_div = main_div;
 
         this.#error_manager = new ErrorManager();
+
+        let themes = new Themes();
+        this.#themes = themes.getThemes();
 
         this.#players_divs = Array.from(this.#main_div.querySelectorAll(".player"))
         let i = 0;

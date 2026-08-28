@@ -53,6 +53,10 @@ img {
     height: 100vh;
     background-color: c.$background-color;
     padding: 10px 10px;
+    @media (max-width: 600px) {
+        height: 100%;
+    }
+    
 }
 
 .container {

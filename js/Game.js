@@ -8,14 +8,16 @@ class Game {
     #hero_id;
     #theme_type;
     #theme_name;
-    #themes = Themes.getThemes();
+    #themes;
 
     constructor(players, spy_count, main_container, theme_name) {
         this.#players = players;
         this.#spy_count = spy_count;
         this.#main_container = main_container;
         this.#theme_name = theme_name;
-
+        
+        let themes = new Themes();
+        this.#themes = themes.getThemes();
         if (this.#players.length < 3) {
             throw new Error("Количество игроков не менее 3")
         }

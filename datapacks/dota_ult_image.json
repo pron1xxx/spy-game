@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Dota 2 Hero Ultimates with Images",
-    "type": "ultimate_abilities"
+    "type": "image"
   },
   "objects": {
     "1": {
