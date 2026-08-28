@@ -9,26 +9,53 @@
 </head>
 
 <body>
-    <div class="settings-container">
+    <div class="settings-container" id="main-container">
         <div class="div-settings">
             <div class="div-settings__header">
                 <h2 class="div-settings__title"> Игроки </h2>
-                <button class="div-settings__button-square"> + </button>
+                <button class="div-settings__button-square" id="add-player-button"> + </button>
             </div>
             <div class="div-settings__inputs">
-                <input class="div-settings__input" value="Игрок 1"></input>
-                <input class="div-settings__input" value="Игрок 2"></input>
-                <input class="div-settings__input" value="Игрок 3"></input>
+                <input class="div-settings__input player" value="Игрок 1"></input>
+                <input class="div-settings__input player" value="Игрок 2"></input>
+                <input class="div-settings__input player" value="Игрок 3"></input>
             </div>
         </div>
         <div class="div-settings">
             <div class="div-settings__header">
-                <h2 class="div-settings__title"> Количество шпионов</h2>
+                <h2 class="div-settings__title"> Количество шпионов </h2>
             </div>
-            <input class="div-settings__input" value="1"></input>
+            <input class="div-settings__input" value="1" id="spy-count-input"></input>
             <p class="div-settings__text"> Впишите rand для случайного количества игроков с ролью шпион </p>
         </div>
-        <button class="settings-button"> Запустить игру </button>
+        <div class="div-settings">
+            <div class="div-settings__header">
+                <h2 class="div-settings__title"> Выбор режима </h2>
+            </div>
+            <select class="div-settings__input" id="theme">
+                <option value="dota_heroes_video.json"> Дота герои видео формат </option>
+                <option value="dota_heroes_image.json"> Дота герои фото формат </option>
+                <option value="dota_staff_image.json"> Дота предметы фото фоомат </option>
+                <option value="rand"> Случайная тема </option>
+            </select>
+        </div>
+        <button class="settings-button" id="start-game-button"> Запустить игру </button>
     </div>
 </body>
+
 </html>
+
+<script src="./js/ErrorManager.js"> </script>
+<script src="./js/JsonManager.js"> </script>
+<script src="./js/Game.js"> </script>
+<script src="./js/GameManager.js"> </script>
+
+<script>
+    
+</script>
+
+<script>
+    const main_div = document.querySelector('#main-container');
+    gameManager = new GameManager(main_div);
+</script>
+

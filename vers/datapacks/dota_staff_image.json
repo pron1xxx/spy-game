@@ -1,0 +1,288 @@
+{
+  "settings": {
+    "name": "Dota2 Items (0-500 & 1800+)",
+    "type": "image"
+  },
+  "objects": {
+    "1": {
+      "name": "Iron Branch",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/iron_branch.png",
+      "cost": 50
+    },
+    "2": {
+      "name": "Healing Salve",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/healing_salve.png",
+      "cost": 100
+    },
+    "3": {
+      "name": "Clarity",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/clarity.png",
+      "cost": 50
+    },
+    "4": {
+      "name": "Enchanted Mango",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/enchanted_mango.png",
+      "cost": 100
+    },
+    "5": {
+      "name": "Faerie Fire",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/faerie_fire.png",
+      "cost": 65
+    },
+    "6": {
+      "name": "Gauntlets of Strength",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/gauntlets.png",
+      "cost": 140
+    },
+    "7": {
+      "name": "Slippers of Agility",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/slippers.png",
+      "cost": 140
+    },
+    "8": {
+      "name": "Mantle of Intelligence",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/mantle.png",
+      "cost": 140
+    },
+    "9": {
+      "name": "Circlet",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/circlet.png",
+      "cost": 160
+    },
+    "10": {
+      "name": "Belt of Strength",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/belt_of_strength.png",
+      "cost": 450
+    },
+    "11": {
+      "name": "Band of Elvenskin",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/band_of_elvenskin.png",
+      "cost": 450
+    },
+    "12": {
+      "name": "Robe of the Magi",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/robe_of_the_magi.png",
+      "cost": 450
+    },
+    "13": {
+      "name": "Ogre Club",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/ogre_axe.png",
+      "cost": 1000
+    },
+    "14": {
+      "name": "Blade of Alacrity",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/blade_of_alacrity.png",
+      "cost": 1000
+    },
+    "15": {
+      "name": "Staff of Wizardry",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/staff_of_wizardry.png",
+      "cost": 1000
+    },
+    "16": {
+      "name": "Broadsword",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/broadsword.png",
+      "cost": 1000
+    },
+    "17": {
+      "name": "Claymore",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/claymore.png",
+      "cost": 1350
+    },
+    "18": {
+      "name": "Mithril Hammer",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/mithril_hammer.png",
+      "cost": 1600
+    },
+    "19": {
+      "name": "Ultimate Orb",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_orb.png",
+      "cost": 2800
+    },
+    "20": {
+      "name": "Point Booster",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/point_booster.png",
+      "cost": 1200
+    },
+    "21": {
+      "name": "Vitality Booster",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/vitality_booster.png",
+      "cost": 1000
+    },
+    "22": {
+      "name": "Energy Booster",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/energy_booster.png",
+      "cost": 800
+    },
+    "23": {
+      "name": "Blink Dagger",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/blink.png",
+      "cost": 2250
+    },
+    "24": {
+      "name": "Force Staff",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/force_staff.png",
+      "cost": 2200
+    },
+    "25": {
+      "name": "Aghanim's Scepter",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_scepter.png",
+      "cost": 4200
+    },
+    "26": {
+      "name": "Aghanim's Shard",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/aghanim_shard.png",
+      "cost": 1400
+    },
+    "27": {
+      "name": "Black King Bar",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/black_king_bar.png",
+      "cost": 4050
+    },
+    "28": {
+      "name": "Butterfly",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/butterfly.png",
+      "cost": 5450
+    },
+    "29": {
+      "name": "Daedalus",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/greater_crit.png",
+      "cost": 5100
+    },
+    "30": {
+      "name": "Desolator",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/desolator.png",
+      "cost": 3500
+    },
+    "31": {
+      "name": "Divine Rapier",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/rapier.png",
+      "cost": 5600
+    },
+    "32": {
+      "name": "Heart of Tarrasque",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/heart.png",
+      "cost": 5200
+    },
+    "33": {
+      "name": "Eye of Skadi",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/skadi.png",
+      "cost": 5300
+    },
+    "34": {
+      "name": "Monkey King Bar",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/monkey_king_bar.png",
+      "cost": 5000
+    },
+    "35": {
+      "name": "Satanic",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/satanic.png",
+      "cost": 5050
+    },
+    "36": {
+      "name": "Battle Fury",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/battle_fury.png",
+      "cost": 3900
+    },
+    "37": {
+      "name": "Radiance",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/radiance.png",
+      "cost": 4700
+    },
+    "38": {
+      "name": "Manta Style",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/manta.png",
+      "cost": 4600
+    },
+    "39": {
+      "name": "Scythe of Vyse",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/sheepstick.png",
+      "cost": 5350
+    },
+    "40": {
+      "name": "Shiva's Guard",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/shivas_guard.png",
+      "cost": 4550
+    },
+    "41": {
+      "name": "Assault Cuirass",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/assault.png",
+      "cost": 5125
+    },
+    "42": {
+      "name": "Ethereal Blade",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/ethereal_blade.png",
+      "cost": 5375
+    },
+    "43": {
+      "name": "Bloodstone",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/bloodstone.png",
+      "cost": 4700
+    },
+    "44": {
+      "name": "Linken's Sphere",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/linken_sphere.png",
+      "cost": 4800
+    },
+    "45": {
+      "name": "Mjollnir",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/mjollnir.png",
+      "cost": 5500
+    },
+    "46": {
+      "name": "Silver Edge",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/silver_edge.png",
+      "cost": 5350
+    },
+    "47": {
+      "name": "Hurricane Pike",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/hurricane_pike.png",
+      "cost": 4450
+    },
+    "48": {
+      "name": "Gleipnir",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/gleipnir.png",
+      "cost": 5650
+    },
+    "49": {
+      "name": "Abyssal Blade",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/abyssal_blade.png",
+      "cost": 6250
+    },
+    "50": {
+      "name": "Refresher Orb",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/refresher.png",
+      "cost": 5000
+    },
+    "51": {
+      "name": "Sange and Yasha",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/sange_and_yasha.png",
+      "cost": 4100
+    },
+    "52": {
+      "name": "Kaya and Sange",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/kaya_and_sange.png",
+      "cost": 4100
+    },
+    "53": {
+      "name": "Yasha and Kaya",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/yasha_and_kaya.png",
+      "cost": 4100
+    },
+    "54": {
+      "name": "Octarine Core",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/octarine_core.png",
+      "cost": 4900
+    },
+    "55": {
+      "name": "Wind Waker",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/wind_waker.png",
+      "cost": 6050
+    },
+    "56": {
+      "name": "Boots of Travel 2",
+      "image": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/boots_of_travel_2.png",
+      "cost": 4500
+    }
+  }
+}
