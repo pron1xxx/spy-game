@@ -68,7 +68,6 @@ class GameManager {
                 this.#theme_name = theme_div.value;
             }
         })
-        
     }
     #createAddButton() {
         const inputs_div = this.#main_div.querySelector(".div-settings__inputs");

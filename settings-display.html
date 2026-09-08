@@ -33,13 +33,15 @@
                 <h2 class="div-settings__title"> Выбор режима </h2>
             </div>
             <select class="div-settings__input" id="theme">
-                <option value="dota_heroes_video.json"> Дота герои видео  </option>
-                <option value="dota_heroes_image.json"> Дота герои фото  </option>
-                <option value="dota_staff_image.json"> Дота предметы  </option>
-                <option value="dota_ult_image.json"> Дота ульты  </option>
+                <option value="dota_heroes_video.json"> Дота герои видео </option>
+                <option value="dota_heroes_image.json"> Дота герои фото </option>
+                <option value="dota_staff_image.json"> Дота предметы </option>
+                <option value="dota_ult_image.json"> Дота ульты </option>
                 <option value="dota_ult_image.json"> Дота все способности (для мазохистов) </option>
                 <option value="rand"> Случайная тема </option>
             </select>
+            <input class="div-settings__input" id="input_player_theme" type="file" onclick="this.value = ''"></input>
+            <button onclick="downloadFile()">Скачать пример файла темы</button>
         </div>
         <button class="settings-button" id="start-game-button"> Запустить игру </button>
     </div>
@@ -54,7 +56,7 @@
 <script src="./js/Themes.js"> </script>
 
 <script>
-    
+
 </script>
 
 <script>
@@ -62,3 +64,22 @@
     gameManager = new GameManager(main_div);
 </script>
 
+<script>
+    function downloadFile() {
+        fetch('./datapacks/example.json')
+            .then(response => response.blob())
+            .then(blob => {
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'Пример темы.json';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+            })
+            .catch(error => {
+                alert('Ошибка скачивания файла');
+                console.error(error);
+            });
+    }
+</script>
