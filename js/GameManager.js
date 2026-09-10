@@ -40,12 +40,56 @@ class GameManager {
             this.#spy_count = this.#main_div.querySelector('#spy-count-input').value;
         })
 
+        const settings_string = localStorage.getItem('user_settings')
+        const settings = JSON.parse(settings_string);
+        if (settings) {
+            console.log(settings)
+            this.#theme_name = settings.theme_name
+            this.#players = []
+            this.#players = settings.players
+            this.#spy_count = settings.spy_count
+
+            const players_div = this.#main_div.querySelector("#players_div");
+
+            players_div.innerHTML = "";
+
+            this.#players_divs = [];
+
+
+            this.#players.forEach((player, index) => {
+                players_div.insertAdjacentHTML("beforeend",
+                    `
+                    <input class="div-settings__input player" value="${player}" id="${index}"></input>
+                    `
+                )
+                const player_div = players_div.querySelector(`[id="${index}"]`);
+
+                player_div.addEventListener('change', () => {
+                    this.#changeValue(player_div);
+                });
+
+                this.#spy_count_input.value = this.#spy_count;
+            })
+
+            let i = 0;
+            this.#players_divs.forEach((player_div) => {
+                this.#players.push(player_div.value)
+                player_div.id = i;
+                i++;
+
+                player_div.addEventListener('change', () => {
+                    this.#changeValue(player_div);
+                })
+            })
+        }
+
         this.#initTheme();
         this.#createAddButton();
 
         this.#start_button.addEventListener('click', () => {
             try {
                 const game = new Game(this.#players, this.#spy_count, this.#main_div, this.#theme_name);
+                this.#saveSettings();
                 game.start_game();
             }
             catch (error) {
@@ -53,7 +97,26 @@ class GameManager {
             }
 
         })
+    }
 
+    #saveSettings() {
+        if (this.#main_div.querySelector('#save-settings').checked) {
+            console.log('settings_save')
+            const settings = {
+                "players": this.#players,
+                "spy_count": this.#spy_count_input.value,
+                "theme_name": this.#theme_name,
+                "test": "test"
+            }
+            console.log(settings);
+            const settings_string = JSON.stringify(settings);
+            localStorage.removeItem('user_settings');
+            console.log(11111);
+            localStorage.setItem('user_settings', settings_string);
+        }
+        else {
+            localStorage.removeItem("user_settings")
+        }
     }
 
     #initTheme() {

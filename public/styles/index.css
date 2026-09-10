@@ -18,7 +18,7 @@ img {
 
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #151515;
   padding: 10px 10px;
 }
@@ -136,7 +136,7 @@ img {
 
 .settings-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #151515;
   padding: 10px 10px;
 }
@@ -187,6 +187,17 @@ img {
   font-weight: 500;
   padding: 3px 8px;
 }
+.div-settings__button {
+  background-color: #26BD00;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 24px;
+  align-self: flex-start;
+}
 .div-settings__inputs {
   display: flex;
   align-items: center;
@@ -209,6 +220,21 @@ img {
   width: 100%;
   font-size: 14px;
   font-weight: 400;
+}
+
+.button-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.button-div__checkbox-div {
+  display: flex;
+  gap: 7px;
+}
+.button-div__checkbox {
+  accent-color: #26BD00;
 }
 
 .settings-button {

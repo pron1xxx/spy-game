@@ -50,7 +50,7 @@ img {
 
 @mixin container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: c.$background-color;
     padding: 10px 10px;
 
@@ -181,6 +181,15 @@ img {
         padding: 3px 8px;
     }
 
+    &__button {
+       @include button; 
+       border-radius: 5px 5px 5px 5px;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 24px;
+        align-self: flex-start;
+    }
+
     &__inputs {
         @include flex-center-column;
         gap: 10px;
@@ -202,6 +211,20 @@ img {
     &__text {
         width: 100%;
         @include t.main_text;
+    }
+}
+
+.button-div {
+    @include flex-center-column();
+    gap: 15px;
+
+    &__checkbox-div {
+        display: flex;
+        gap: 7px;
+    }
+
+    &__checkbox {
+        accent-color: c.$buttons_color;
     }
 }
 

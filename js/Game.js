@@ -16,6 +16,8 @@ class Game {
         this.#main_container = main_container;
         this.#theme_name = theme_name;
 
+        console.log(players)
+
         let themes = new Themes();
         this.#themes = themes.getThemes();
         if (this.#players.length < 3) {
