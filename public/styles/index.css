@@ -206,6 +206,10 @@ img {
   gap: 10px;
   width: 100%;
 }
+.div-settings__input-div {
+  display: flex;
+  width: 100%;
+}
 .div-settings__input {
   font-size: 16px;
   font-weight: 500;
@@ -220,6 +224,17 @@ img {
   width: 100%;
   font-size: 14px;
   font-weight: 400;
+}
+
+.delete_button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background-color: rgb(207, 8, 8);
+}
+
+.button-wrapper {
+  position: relative;
 }
 
 .button-div {

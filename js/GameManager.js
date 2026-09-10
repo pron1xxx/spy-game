@@ -59,7 +59,19 @@ class GameManager {
             this.#players.forEach((player, index) => {
                 players_div.insertAdjacentHTML("beforeend",
                     `
-                    <input class="div-settings__input player" value="${player}" id="${index}"></input>
+                    <div class="div-settings__input-div">
+                        <input class="div-settings__input player" value="${player}" id="${index}"></input>
+                        <div class="button-wrapper">
+                            <button class="div-settings__button-square delete_button"> <svg
+                                    xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1M6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                     `
                 )
                 const player_div = players_div.querySelector(`[id="${index}"]`);
@@ -85,6 +97,16 @@ class GameManager {
 
         this.#initTheme();
         this.#createAddButton();
+
+        const deleteButtons = this.#main_div.querySelectorAll(".delete_button")
+
+        deleteButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                let div = button.closest(".div-settings__input-div")
+                div.remove()
+            })
+        })
+
 
         this.#start_button.addEventListener('click', () => {
             try {
@@ -139,7 +161,19 @@ class GameManager {
         addButton.addEventListener('click', () => {
             inputs_div.insertAdjacentHTML("beforeend",
                 `
-            <input class="div-settings__input player" value="Игрок ${this.#players.length + 1}" id="${this.#players.length}"></input>
+                <div class="div-settings__input-div">
+                    <input class="div-settings__input player" value="Игрок ${this.#players.length + 1}" id="${this.#players.length}"></input>
+                    <div class="button-wrapper">
+                                    <button class="div-settings__button-square delete_button"> <svg
+                                            xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                            <path d="M0 0h24v24H0z" fill="none" />
+                                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1M6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                </div>
             `
             )
             const main_div = this.#main_div;
@@ -150,7 +184,18 @@ class GameManager {
             player_div.addEventListener('change', () => {
                 this.#changeValue(player_div);
             })
+
+            const deleteButtons = this.#main_div.querySelectorAll(".delete_button")
+
+            deleteButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    let div = button.closest(".div-settings__input-div")
+                    div.remove()
+                })
+            })
         })
+
+
     }
 
     #changeValue(player_div) {

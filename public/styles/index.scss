@@ -182,8 +182,8 @@ img {
     }
 
     &__button {
-       @include button; 
-       border-radius: 5px 5px 5px 5px;
+        @include button;
+        border-radius: 5px 5px 5px 5px;
         font-size: 14px;
         font-weight: 500;
         padding: 10px 24px;
@@ -193,6 +193,11 @@ img {
     &__inputs {
         @include flex-center-column;
         gap: 10px;
+        width: 100%;
+    }
+
+    &__input-div {
+        display: flex;
         width: 100%;
     }
 
@@ -212,6 +217,17 @@ img {
         width: 100%;
         @include t.main_text;
     }
+}
+
+.delete_button {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background-color: rgb(207, 8, 8);
+}
+
+.button-wrapper {
+    position: relative;
 }
 
 .button-div {
