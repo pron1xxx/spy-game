@@ -415,3 +415,52 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button:hover {
     background-color: c.$buttons-color;
 }
+
+.theme-container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        max-width: 100%;
+        min-width: 60%;
+    }
+
+    &__title {
+        @include t.main_title;
+    }
+
+    &__button {
+        @include main-button;
+    }
+
+    &__themes_cards {
+        width: 100%;
+        @include flex-center-column;
+    }
+
+    &__themes_card {
+        @include div;
+        max-width: 500px;
+        @include flex-center-column;
+    }
+
+    &__subtitle {
+        @include t.main-subtitle;
+    }
+
+    &__hero-image {
+        max-width: 60%;
+        max-height: 400px;
+        overflow: hidden;
+
+        @media (max-width: 500px) {
+            max-width: 100%;
+        }
+    }
+}
