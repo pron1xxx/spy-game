@@ -43,7 +43,6 @@ class GameManager {
         const settings_string = localStorage.getItem('user_settings')
         const settings = JSON.parse(settings_string);
         if (settings) {
-            console.log(settings)
             this.#theme_name = settings.theme_name
             this.#players = []
             this.#players = settings.players
@@ -97,16 +96,7 @@ class GameManager {
 
         this.#initTheme();
         this.#createAddButton();
-
-        const deleteButtons = this.#main_div.querySelectorAll(".delete_button")
-
-        deleteButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                let div = button.closest(".div-settings__input-div")
-                div.remove()
-            })
-        })
-
+        this.#initDeleteButtons();
 
         this.#start_button.addEventListener('click', () => {
             try {
@@ -123,17 +113,14 @@ class GameManager {
 
     #saveSettings() {
         if (this.#main_div.querySelector('#save-settings').checked) {
-            console.log('settings_save')
             const settings = {
                 "players": this.#players,
                 "spy_count": this.#spy_count_input.value,
                 "theme_name": this.#theme_name,
                 "test": "test"
             }
-            console.log(settings);
             const settings_string = JSON.stringify(settings);
             localStorage.removeItem('user_settings');
-            console.log(11111);
             localStorage.setItem('user_settings', settings_string);
         }
         else {
@@ -154,6 +141,8 @@ class GameManager {
             }
         })
     }
+
+
     #createAddButton() {
         const inputs_div = this.#main_div.querySelector(".div-settings__inputs");
         const addButton = this.#main_div.querySelector("#add-player-button");
@@ -184,18 +173,46 @@ class GameManager {
             player_div.addEventListener('change', () => {
                 this.#changeValue(player_div);
             })
-
-            const deleteButtons = this.#main_div.querySelectorAll(".delete_button")
-
-            deleteButtons.forEach((button) => {
-                button.addEventListener('click', () => {
-                    let div = button.closest(".div-settings__input-div")
-                    div.remove()
-                })
+            const delete_button = player_div.closest(".div-settings__input-div").querySelector(".delete_button")
+            delete_button.addEventListener('click', () => {
+                this.#removeButton(delete_button);
             })
+
         })
 
 
+    }
+
+    #removeButton(button) {
+        let div = button.closest(".div-settings__input-div")
+        let id = div.querySelector(".player").id
+
+        div.remove();
+
+        this.#players_divs.splice(id, 1)
+        let i = 0;
+        this.#players.length = 0
+        const regex = /^Игрок \d+$/;
+
+        this.#players_divs.forEach((player) => {
+            this.#players.push(player.value)
+            player.id = i
+            if(regex.test(player.value)) {
+               player.value = `Игрок ${i+1}` 
+            }
+            i++
+        })
+
+    }
+
+    #initDeleteButtons() {
+        const deleteButtons = this.#main_div.querySelectorAll(".delete_button")
+        deleteButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+
+                this.#removeButton(button);
+            })
+        })
     }
 
     #changeValue(player_div) {
