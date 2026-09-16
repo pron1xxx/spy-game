@@ -15,10 +15,46 @@
                 <h2 class="div-settings__title"> Игроки </h2>
                 <button class="div-settings__button-square" id="add-player-button"> + </button>
             </div>
-            <div class="div-settings__inputs">
-                <input class="div-settings__input player" value="Игрок 1"></input>
-                <input class="div-settings__input player" value="Игрок 2"></input>
-                <input class="div-settings__input player" value="Игрок 3"></input>
+            <div class="div-settings__inputs" id="players_div">
+                <div class="div-settings__input-div">
+                    <input class="div-settings__input player" value="Игрок 1"></input>
+                    <div class="button-wrapper">
+                        <button class="div-settings__button-square delete_button"> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1M6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="div-settings__input-div">
+                    <input class="div-settings__input player" value="Игрок 2"></input>
+                    <div class="button-wrapper">
+                        <button class="div-settings__button-square delete_button"> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1M6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="div-settings__input-div">
+                    <input class="div-settings__input player" value="Игрок 3"></input>
+                    <div class="button-wrapper">
+                        <button class="div-settings__button-square delete_button"> <svg
+                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1M6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="div-settings">
@@ -33,15 +69,27 @@
                 <h2 class="div-settings__title"> Выбор режима </h2>
             </div>
             <select class="div-settings__input" id="theme">
-                <option value="dota_heroes_video.json"> Дота герои видео  </option>
-                <option value="dota_heroes_image.json"> Дота герои фото  </option>
-                <option value="dota_staff_image.json"> Дота предметы  </option>
-                <option value="dota_ult_image.json"> Дота ульты  </option>
+                <option value="dota_heroes_video.json"> Дота герои видео </option>
+                <option value="dota_heroes_image.json"> Дота герои фото </option>
+                <option value="dota_staff_image.json"> Дота предметы </option>
+                <option value="dota_ult_image.json"> Дота ульты </option>
                 <option value="dota_ult_image.json"> Дота все способности (для мазохистов) </option>
                 <option value="rand"> Случайная тема </option>
             </select>
+            <div class="div-settings__inputs">
+                <input class="div-settings__input" id="input_player_theme" type="file"
+                    onclick="this.value = ''"></input>
+                <button onclick="downloadFile()" class="div-settings__button">Скачать пример файла темы</button>
+            </div>
         </div>
-        <button class="settings-button" id="start-game-button"> Запустить игру </button>
+        <div class="button-div">
+            <button class="settings-button" id="start-game-button"> Запустить игру </button>
+            <div class="button-div__checkbox-div">
+                <input type="checkbox" id="save-settings" class="button-div__checkbox">
+                <label for="save-settings" button-div__label> Сохранить параметры игры </label>
+            </div>
+        </div>
+
     </div>
 </body>
 
@@ -54,7 +102,7 @@
 <script src="./js/Themes.js"> </script>
 
 <script>
-    
+
 </script>
 
 <script>
@@ -62,3 +110,22 @@
     gameManager = new GameManager(main_div);
 </script>
 
+<script>
+    function downloadFile() {
+        fetch('./datapacks/example.json')
+            .then(response => response.blob())
+            .then(blob => {
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'Пример темы.json';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+            })
+            .catch(error => {
+                alert('Ошибка скачивания файла');
+                console.error(error);
+            });
+    }
+</script>

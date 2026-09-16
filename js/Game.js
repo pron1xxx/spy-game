@@ -15,7 +15,9 @@ class Game {
         this.#spy_count = spy_count;
         this.#main_container = main_container;
         this.#theme_name = theme_name;
-        
+
+        console.log(players)
+
         let themes = new Themes();
         this.#themes = themes.getThemes();
         if (this.#players.length < 3) {
@@ -27,26 +29,71 @@ class Game {
         else if (this.#players.length < this.#spy_count) {
             throw new Error("Количество шпионов не может превышать количество игроков!");
         }
-
-        this.#init_theme();
     }
 
     async #init_theme() {
         this.#json_manager = new JsonManager();
-        console.log(this.#theme_name);
-        if(!this.#themes.includes(this.#theme_name)) {
+        if (!this.#themes.includes(this.#theme_name)) {
             throw new Error(`Неверная тема! ${this.#theme_name}`);
         }
 
         const data = await this.#json_manager.readJson(`datapacks/${this.#theme_name}`);
 
-        this.#theme_json = data['objects'];
-
-        this.#hero_id = Math.floor(Math.random() * Object.keys(this.#theme_json).length) + 1;
-
-        this.#theme_type = data['settings']['type'];
+        this.#set_theme(data);
     }
 
+    async #checkUserTheme() {
+        const input = this.#main_container.querySelector('#input_player_theme');
+        const file = input.files[0];
+
+        if (!file) {
+            console.log('ℹПользовательская тема не выбрана');
+            return;
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            try {
+                const data = JSON.parse(e.target.result);
+
+                if (!data.settings || !data.settings.name) {
+                    throw new Error('Неверная структура JSON: нет settings.name');
+                }
+
+                this.#set_theme(data);
+                this.#save_theme_local(data);
+
+            } catch (error) {
+                throw new Error('Невалидный JSON');
+            }
+        };
+
+        reader.onerror = () => {
+            throw new Error('Ошибка чтения файла');
+        };
+
+        reader.readAsText(file);
+    }
+
+    async #set_theme(data) {
+        this.#theme_json = data['objects'];
+        this.#hero_id = Math.floor(Math.random() * Object.keys(this.#theme_json).length) + 1;
+        this.#theme_type = data['settings']['type'];
+        this.#theme_name = data.settings?.name || data.theme_name || 'Пользовательская тема';
+    }
+
+    #save_theme_local(data) {
+        const jsonString = JSON.stringify(data);
+
+        try {
+            localStorage.setItem(data['settings']['name'], jsonString)
+        }
+        catch (error) {
+            console.error('Ошибка сохранения:', error);
+            throw new error;
+        }
+    }
 
     #choose_spy() {
         const spys = [];
@@ -88,7 +135,9 @@ class Game {
         })
     }
 
-    start_game() {
+    async start_game() {
+        await this.#init_theme();
+        await this.#checkUserTheme();
         this.#spys = this.#choose_spy();
         this.#render_gameScreen();
     }
