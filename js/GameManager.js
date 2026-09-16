@@ -195,11 +195,11 @@ class GameManager {
         const regex = /^Игрок \d+$/;
 
         this.#players_divs.forEach((player) => {
-            this.#players.push(player.value)
             player.id = i
             if(regex.test(player.value)) {
                player.value = `Игрок ${i+1}` 
             }
+            this.#players.push(player.value)
             i++
         })
 
