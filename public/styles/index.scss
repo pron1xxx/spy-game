@@ -441,7 +441,10 @@ input[type="file"]::file-selector-button:hover {
 
     &__themes_cards {
         width: 100%;
-        @include flex-center-column;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(250px, 1fr));
+        gap: 24px;
+        max-width: 60%;
     }
 
     &__themes_card {

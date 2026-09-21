@@ -12,17 +12,19 @@
     <div class="theme-container">
         <div class="theme-container__footer">
             <h2 class="theme-container__title"> Тема "Название"</h2>
-            <button class="theme-container__button"> Назад </button>
+            <a href="./settings-display.html"><button class="theme-container__button"> Назад </button></a>
         </div>
         <div class="theme-container__themes_cards">
-            <div class="theme-container__themes_card">
-                <p class="theme-container__subtitle"> hero </p>
-                <div class="theme-container__hero-image"><img
-                        src="https://cdn.steamstatic.com/apps/dota2/images/dota_react/heroes/alchemist.png" alt="">
-                </div>
-            </div>
         </div>
     </div>
 </body>
-
 </html>
+
+<script src="./js/PreviewManager.js"> </script>
+<script src="./js/ErrorManager.js"> </script>
+<script src="./js/Themes.js"> </script>
+<script src="./js/JsonManager.js"> </script>
+
+<script>
+    let previewManager = new PreviewManager();
+</script>
