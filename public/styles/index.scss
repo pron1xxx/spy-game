@@ -431,6 +431,13 @@ input[type="file"]::file-selector-button:hover {
         min-width: 60%;
     }
 
+    &__inputs {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+
     &__title {
         @include t.main_title;
     }

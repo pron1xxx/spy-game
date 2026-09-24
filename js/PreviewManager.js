@@ -25,6 +25,12 @@ class PreviewManager {
         this.#themeNameDiv = this.#mainContainer.querySelector(".theme-container__title")
         this.#cardsDiv = this.#mainContainer.querySelector(".theme-container__themes_cards")
 
+        this.#initProxy();
+    }
+
+    async #initProxy() {
+        await this.#initTheme();
+        await this.#initUserThemeButton();
         this.#startRender();
     }
 
@@ -54,7 +60,6 @@ class PreviewManager {
     }
 
     async #startRender() {
-        await this.#initTheme();
         let heroes = this.#themeData.objects;
         const { type, name } = this.#themeData.settings;
 
@@ -64,6 +69,7 @@ class PreviewManager {
             .map(hero => this.#buildCardHTML(hero.name, hero.image, type))
             .join('');
 
+        this.#cardsDiv.innerHTML = "";
         this.#cardsDiv.insertAdjacentHTML('beforeend', html);
 
         this.#setupLazyVideos();
@@ -86,6 +92,47 @@ class PreviewManager {
         });
 
         this.#cardsDiv.querySelectorAll("video").forEach(v => this.#videoObserver.observe(v));
+    }
+
+    async #initUserThemeButton() {
+        const button = document.querySelector("#user_theme_button")
+        const input = document.querySelector('#input_player_theme');
+
+        button.addEventListener('click', () => {
+            const file = input.files[0];
+
+            if (!file) {
+                this.#errorManager.show("Файл не выбран")
+                return
+            }
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+
+                    if (!data.settings || !data.settings.name) {
+                        this.#errorManager.show("Неверная структура json")
+                        throw new Error('Невалидный JSON');
+                    }
+
+                    this.#themeData = data;
+                    console.log(this.#themeData);
+                    this.#startRender()
+
+                } catch (error) {
+                    this.#errorManager.show("Невалидный json")
+                    throw new Error('Невалидный JSON');
+                }
+            };
+
+            reader.onerror = () => {
+                this.#errorManager.show("Ошибка чтения файла")
+                throw new Error('Ошибка чтения файла');
+            };
+
+            reader.readAsText(file);
+        })
     }
 
     async #playVideo(video) {
