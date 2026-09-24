@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Игра в шпиона </title>
     <link rel="stylesheet" href="./public/styles/index.css">
 </head>
 
@@ -68,14 +68,17 @@
             <div class="div-settings__header">
                 <h2 class="div-settings__title"> Выбор режима </h2>
             </div>
-            <select class="div-settings__input" id="theme">
-                <option value="dota_heroes_video.json"> Дота герои видео </option>
-                <option value="dota_heroes_image.json"> Дота герои фото </option>
-                <option value="dota_staff_image.json"> Дота предметы </option>
-                <option value="dota_ult_image.json"> Дота ульты </option>
-                <option value="dota_ult_image.json"> Дота все способности (для мазохистов) </option>
-                <option value="rand"> Случайная тема </option>
-            </select>
+            <div class="div-settings__inputs">
+                <select class="div-settings__input" id="theme">
+                    <option value="dota_heroes_video.json"> Дота герои видео </option>
+                    <option value="dota_heroes_image.json"> Дота герои фото </option>
+                    <option value="dota_staff_image.json"> Дота предметы </option>
+                    <option value="dota_ult_image.json"> Дота ульты </option>
+                    <option value="dota_ult_image.json"> Дота все способности (для мазохистов) </option>
+                    <option value="rand"> Случайная тема </option>
+                </select>
+                <button onclick="redirectPreview()" class="div-settings__button">Предосмотр темы</button>
+            </div>
             <div class="div-settings__inputs">
                 <input class="div-settings__input" id="input_player_theme" type="file"
                     onclick="this.value = ''"></input>
@@ -107,7 +110,7 @@
 
 <script>
     const main_div = document.querySelector('#main-container');
-    gameManager = new GameManager(main_div);
+    let gameManager = new GameManager(main_div);
 </script>
 
 <script>
@@ -127,5 +130,10 @@
                 alert('Ошибка скачивания файла');
                 console.error(error);
             });
+    }
+
+    function redirectPreview() {
+        let themeName = document.querySelector("#theme").value
+        window.location.href =`./theme-preview.html?themeName=${themeName}`
     }
 </script>
